@@ -91,8 +91,19 @@ fisher.test(table1)
 ```
 The statistical analysis demonstrates a remarkably low p-value of 0.000002287, which indicates a highly significant difference in the dining-out behavior between white individuals and the other two groups.
 
+## Fisher
+
+```{r}
+fisherXY(mydata$race,mydata$eatout)
+```
+The analysis reveals a statistically significant difference in the dining-out behavior between white individuals and the other two groups. With a p-value of 0.00001183, the odds of a white person eating out are 2.2 times higher compared to a black individual. Additionally, the p-value of 0.00721 indicates that the odds of white individuals eating out are 1.9 times higher compared to individuals from other ethnic backgrounds. These findings provide robust evidence supporting the conclusion that white individuals have a significantly higher likelihood of engaging in dining-out activities compared to both black individuals and individuals from other ethnic backgrounds.
+
+```{r}
+fisherXY(mydata$race,mydata$eatout,printAll = TRUE)
+```
+Upon further examination of the additional data, it indicates that black individuals have approximately 0.86% higher odds of eating out compared to individuals from the other category. The p-value of 0.5993 between the black and other category suggests that this difference is not statistically significant. In other words, the observed disparity in dining-out behavior between black individuals and those from the other category may occur due to random chance rather than a meaningful distinction.
 
 
-
+##Conclusion 
 
 
