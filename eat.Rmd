@@ -25,16 +25,54 @@ $H_A$ There is a statistical difference between at least two races with the freq
 source(file="fisherXY.R")
 require(tidyverse)
 require(tigerstats)
+require(haven)
 require(knitr)
 require(foreign)
 ```
-```{r, eval=FALSE}
-GSS <-read.dta(file="GSSxxxx.dta")
+```{r, eval=TRUE}
+GSS <-read_dta(file="GSS1998.dta")
+GSS <- readstata13::read.dta13(file="GSS1998.dta")
 GSS <- droplevels(GSS)
 mydata <- select(GSS,race,age,eatout)
 mydata <- na.omit(mydata)
 ```
 
+
+
+
+#### Plot barplots tigerstats way
+```{r}
+barchartGC(~race + eatout,data=mydata)
+barchartGC(~race + eatout,data=mydata, type="percent")
+
+```
+
+According to the statistical data represented in the bar plot from thetiger stat, approximately 80% of individuals identifying as white reported dining out. In contrast, around 68% of the black population surveyed indicated a preference for eating out, while approximately 72% of individuals from other ethnic backgrounds expressed the same behavior. These findings suggest a higher proportion of white individuals engaging in dining out activities compared to the other two demographic groups under consideration.
+
+
+
+
+#### Plot barplots ggplot way
+
+```{r}
+dd2 <- mydata %>% group_by(race,eatout) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
+
+
+# the group_by followed by summarize(count=n())
+
+basicC <- ggplot(dd2,aes(x=race,y=count,fill=eatout))
+basicC + geom_bar(stat="identity",position="dodge")
+
+#Now for percentage plot
+
+basicCC <- ggplot(dd2,aes(x=race,y=prcnt*100,fill=eatout)) 
+basicCC + geom_bar(stat="identity", position = "dodge")
+```
+  
+
+
+
+### Numerical Summaries   
 
 
 
