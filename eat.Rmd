@@ -68,8 +68,8 @@ basicC + geom_bar(stat="identity",position="dodge")
 basicCC <- ggplot(dd2,aes(x=race,y=prcnt*100,fill=eatout)) 
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
-  
 
+Utilizing an alternative visualization technique, specifically a box plot, further validates the initial observations that white individuals exhibit a higher propensity for dining out. The data suggests that out of the surveyed white population, 80% engage in eating out activities. By representing this information using a box plot, we can reaffirm the dominant trend of white individuals' higher preference for dining out compared to other two groups.
 
 
 ### Numerical Summaries   
