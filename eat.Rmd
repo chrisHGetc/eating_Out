@@ -83,4 +83,16 @@ colPerc(table1)
 Upon analyzing the numerical summary data, it is evident that white individuals have a significantly higher proportion of dining out, with approximately 83% of the surveyed population engaging in this behavior. In comparison, around 69% of black individuals and 72% of individuals from other ethnic backgrounds reported participating in eating out activities. These findings strongly support the initial conclusion that white individuals exhibit a higher frequency of dining out compared to the other demographic groups surveyed.
 
 
+## Inferential  
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+The statistical analysis demonstrates a remarkably low p-value of 0.000002287, which indicates a highly significant difference in the dining-out behavior between white individuals and the other two groups.
+
+
+
+
+
 
