@@ -39,7 +39,7 @@ mydata <- na.omit(mydata)
 
 
 ## Methods
-
+Based on observations, I plan to utilize a bar plot generated through TigerStats to gain a deeper understanding of three distinct survey groups: white, black, and other. This graphical representation will serve as an initial step in analyzing the data. Additionally, I intend to employ numerical and inferential breakdowns to further explore the dataset and extract more detailed insights. By combining these analytical approaches, I aim to draw a conclusive understanding regarding the dining-out behavior of the surveyed groups. Such a comprehensive analysis will provide a solid foundation for forming conclusive conclusions based on the available data.
 
 
 
