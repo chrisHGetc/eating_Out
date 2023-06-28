@@ -74,9 +74,13 @@ Utilizing an alternative visualization technique, specifically a box plot, furth
 
 ### Numerical Summaries   
 
+```{r}
+table1 <- xtabs(~race + eatout, data=mydata)
+rowPerc(table1)
+colPerc(table1)
+```
 
-
-
+Upon analyzing the numerical summary data, it is evident that white individuals have a significantly higher proportion of dining out, with approximately 83% of the surveyed population engaging in this behavior. In comparison, around 69% of black individuals and 72% of individuals from other ethnic backgrounds reported participating in eating out activities. These findings strongly support the initial conclusion that white individuals exhibit a higher frequency of dining out compared to the other demographic groups surveyed.
 
 
 
