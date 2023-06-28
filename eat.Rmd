@@ -29,13 +29,17 @@ require(haven)
 require(knitr)
 require(foreign)
 ```
-```{r, eval=TRUE}
+```{r, eval=TRUE, warning=FALSE}
 GSS <-read_dta(file="GSS1998.dta")
 GSS <- readstata13::read.dta13(file="GSS1998.dta")
 GSS <- droplevels(GSS)
 mydata <- select(GSS,race,age,eatout)
 mydata <- na.omit(mydata)
 ```
+
+
+## Methods
+
 
 
 
@@ -104,6 +108,6 @@ fisherXY(mydata$race,mydata$eatout,printAll = TRUE)
 Upon further examination of the additional data, it indicates that black individuals have approximately 0.86% higher odds of eating out compared to individuals from the other category. The p-value of 0.5993 between the black and other category suggests that this difference is not statistically significant. In other words, the observed disparity in dining-out behavior between black individuals and those from the other category may occur due to random chance rather than a meaningful distinction.
 
 
-##Conclusion 
+## Conclusion 
 
-
+In summary, the analysis of the data reveals significant differences in the dining-out behavior among various racial and ethnic groups. White individuals consistently demonstrate a notably higher prevalence of eating out compared to both black individuals and individuals from other ethnic backgrounds. The statistical analysis provides strong evidence supporting these findings, with significantly low p-values indicating the substantial disparities in dining-out habits. However, when examining the odds of eating out between black individuals and individuals from the other category, the observed difference is not statistically significant, suggesting that this distinction may be due to random chance. Overall, the findings suggest that white individuals have a significantly higher likelihood of engaging in dining-out activities compared to the other surveyed groups.
